@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Macondo&family=Poppins:wght@200&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Macondo', cursive;
+    list-style-type: none;
+}
+
+body {
+    height: 100vh;
+    color: green;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, yellow, rgba(160, 240, 13, 0.747));
+}
+.container {
+    width: 400px;
+    margin: 100px auto;
+    background: white;
+    padding-top: 10px;
+    border-radius: 6px;
+    overflow:  hidden;
+}
+.container form {
+    border-bottom: 1px solid grey;
+    padding: 20px 20px;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+}
+form input {
+    font-size: 24px;
+    width: 100%;
+    margin-right: 15px;
+    border: none;
+    outline: none;
+
+}
+form button {
+    background: red;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    /* outline: none; */
+} 
+.todos li {
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 22px;
+    align-items: center;
+    cursor: pointer;
+}
+li span {
+    white-space: nowrap; 
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+ li.completed {
+    color: #aaa;
+ 
+}
+.completed span {
+    text-decoration: line-through;
+}

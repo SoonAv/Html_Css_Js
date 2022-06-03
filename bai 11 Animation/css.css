@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Macondo&family=Poppins:wght@200&display=swap');
+:root {
+    --success-color : green ;
+    --warning-color : orange;
+    --error-color : red;
+    --success-light : rgba(0, 128, 0,0.4) ;
+    --warning-light : rgb(255, 165, 0,0.4);
+    --error-light : rgb(255, 0, 0,0.4);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  
+    font-family: 'Poppins', sans-serif;
+    background: white;
+}
+.control button {
+    color: white;
+    font-size: 20px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    margin: 0 10px;
+}
+.success {
+    background: var(--success-color);
+    
+}
+
+.warning {
+    background: var(--warning-color);
+    
+}
+.error {
+    background: var(--error-color);
+  
+}
+#toasts {
+    position: fixed;
+    top: 10px;
+    right:10px;
+}
+.toasts {
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    border-left: 6px solid var(--success-color);
+    overflow: hidden;
+    animation: slide_show 2s forwards;
+}
+.toasts i {
+    margin: 0 15px;
+}
+.toasts .coundown {
+    background: var(--success-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    animation: coundown 2s linear;
+}
+.toasts.success {
+    background: var(--success-light);
+}
+@keyframes coundown {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width:0%
+    }
+}
+@keyframes slide_show {
+    0% {
+        transform: translateX(100%);
+    }
+    25% {
+        transform: translateX(-10%);
+
+    }
+    50% {
+        transform: translateX(10%);
+
+    }
+}
+@keyframes slide_hide {
+    0% {
+        transform: translateX(100%);
+    }
+    25% {
+        transform: translateX(-10%);
+
+    }
+    50% {
+        transform: translateX(10%);
+
+    }
+}
